@@ -10,6 +10,7 @@
 
 ### MemberCnt 추가
  Long id, String mbrContact, String mbrContactCategory, MbrStatCode mbrStatCd
+ 
 ### MemberCntDto 추가
 ### MemberCntRepository 추가
 ### MemberCntService 추가
