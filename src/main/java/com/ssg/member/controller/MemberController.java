@@ -15,7 +15,6 @@ public class MemberController {
 
     private final MemberService memberService;
 
-
     @GetMapping("/members/{mbrId}")
     public ResponseDto<MemberDto> getMember(@PathVariable Long mbrId) {
         try {

@@ -27,8 +27,13 @@ public class MemberShpLoc {
     @Column
     private LocalDateTime createdAt = LocalDateTime.now();
 
+//    @ManyToOne
+//    @JoinColumn(name = "mbrId")
+//    private Member member;
+
     @Builder
     public MemberShpLoc(Long mbrId, int isDefault, String address) {
+//        this.member = member;
         this.mbrId = mbrId;
         this.isDefault = isDefault;
         this.address = address;
