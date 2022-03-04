@@ -2,6 +2,7 @@ package com.ssg.member.repository;
 
 import com.ssg.member.domain.Member;
 import com.ssg.member.domain.code.MbrStatCode;
+import com.ssg.member.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
