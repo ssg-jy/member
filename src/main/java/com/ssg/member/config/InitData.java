@@ -2,7 +2,9 @@ package com.ssg.member.config;
 
 import com.ssg.member.domain.Member;
 import com.ssg.member.domain.MemberShpLoc;
+import com.ssg.member.domain.MemberCnt;
 import com.ssg.member.domain.code.MbrStatCode;
+import com.ssg.member.repository.MemberCntRepository;
 import com.ssg.member.repository.MemberRepository;
 import com.ssg.member.repository.MemberShpLocRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +21,7 @@ public class InitData {
     private final MemberRepository memberRepository;
 
     private final MemberShpLocRepository memberShpLocRepository;
+    private final MemberCntRepository memberCntRepository;
 
     @PostConstruct
     public void init() {
@@ -60,6 +63,21 @@ public class InitData {
         memberShpLocRepository.save(testLoc2);
         memberShpLocRepository.save(testLoc3);
         memberShpLocRepository.save(testLoc4);
+        MemberCnt testMemberCnt1 = MemberCnt.builder()
+                .mbrContact("01076766666")
+                .mbrContactCategory("home")
+                .mbrStatCd(MbrStatCode.ACTIVE)
+                .build();
+
+        MemberCnt testMemberCnt2 = MemberCnt.builder()
+                .mbrContact("01076769999")
+                .mbrContactCategory("phone")
+                .mbrStatCd(MbrStatCode.DORMANT)
+                .build();
+
+        memberCntRepository.save(testMemberCnt1);
+        memberCntRepository.save(testMemberCnt2);
     }
 
 }
+
